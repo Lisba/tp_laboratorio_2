@@ -9,29 +9,29 @@ namespace Entidades
 {
     public class Numero
     {
-        private double number;
+        private double numero;
 
-        public string Number
+        public string SetNumero
         {
             set 
             {
-                number = ValidarNumero(value);
+                numero = ValidarNumero(value);
             }
         }
 
-        public Numero()
+        public Numero(): this(default(Double))
         {
-            number = 0;
+            
         }
         
-        public Numero(double numero)
+        public Numero(double numero): this(numero.ToString())
         {
-            number = numero;
+            
         }
         
         public Numero(string strNumero)
         {
-            Double.TryParse(strNumero, out number);
+            SetNumero = strNumero;
         }
 
         public static string BinarioDecimal(string binario)
@@ -69,7 +69,7 @@ namespace Entidades
         public static string DecimalBinario(double numero)
         {
             int resto;
-            string resultado = string.Empty;
+            string resultado = String.Empty;
             int numeroEntero = (int)numero;
 
             while (numeroEntero > 0)
@@ -107,26 +107,26 @@ namespace Entidades
 
         public static double operator +(Numero n1, Numero n2)
         {
-            return n1.number + n2.number;
+            return n1.numero + n2.numero;
         }
 
         public static double operator -(Numero n1, Numero n2)
         {
-            return n1.number - n2.number;
+            return n1.numero - n2.numero;
         }
 
         public static double operator *(Numero n1, Numero n2)
         {
-            return n1.number * n2.number;
+            return n1.numero * n2.numero;
         }
 
         public static double operator /(Numero n1, Numero n2)
         {
             double returnValue = double.MinValue;
 
-            if (n2.number != 0)
+            if (n2.numero != 0)
             {
-                returnValue = n1.number / n2.number;
+                returnValue = n1.numero / n2.numero;
             }
 
             return returnValue;
@@ -140,12 +140,13 @@ namespace Entidades
 
             foreach(char character in strNumero)
             {
-                if((character < '0' || character > '9') && (character != ','))
+                if((character < '0' || character > '9') && (character != ',' && character != '.'))
                 {
                     isDouble = false;
+                    break;
                 }
 
-                if (character == ',')
+                if (character == ',' || character == '.')
                 {
                     comaCounter++;
                 }

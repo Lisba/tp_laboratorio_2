@@ -10,54 +10,63 @@ namespace Entidades
     {
         public static double Operar(Numero num1, Numero num2, string operador)
         {
-            double returnValue;
+            double returnValue = 0;
+            char charOperator;
 
-            switch (operador)
+            if (String.IsNullOrEmpty(operador))
             {
-                case "+":
-                    returnValue = num1 + num2;
-                    break;
-                case "-":
-                    returnValue = num1 - num2;
-                    break;
-                case "*":
-                    returnValue = num1 * num2;
-                    break;
-                case "/":
-                    returnValue = num1 / num2;
-                    break;
-                default:
-                    returnValue = num1 + num2;
-                    break;
+                operador = "+";
+            }
+
+            if (char.TryParse(operador, out charOperator))
+            {
+                switch (ValidarOperador(charOperator))
+                {
+                    case "+":
+                        returnValue = num1 + num2;
+                        break;
+                    case "-":
+                        returnValue = num1 - num2;
+                        break;
+                    case "*":
+                        returnValue = num1 * num2;
+                        break;
+                    case "/":
+                        returnValue = num1 / num2;
+                        break;
+                    default:
+                        returnValue = num1 + num2;
+                        break;
+                }
             }
 
             return returnValue;
         }
 
-        static string ValidarOperador(char operador)
+        private static string ValidarOperador(char operador)
         {
-            char returnValue;
+            string returnValue = String.Empty;
 
             switch (operador)
             {
                 case '+':
-                    returnValue = operador;
+                    returnValue = "+";
                     break;
                 case '-':
-                    returnValue = operador;
+                    returnValue = "-";
                     break;
                 case '*':
-                    returnValue = operador;
+                    returnValue = "*";
                     break;
                 case '/':
-                    returnValue = operador;
+                    returnValue = "/";
                     break;
                 default:
-                    returnValue = '+';
+                    returnValue = "+";
                     break;
             }
 
-            return Char.ToString(returnValue);
+            return returnValue;
         }
     }
 }
