@@ -9,7 +9,12 @@ namespace Entidades
 {
     public class Numero
     {
+        #region Fields
+        /// <summary>
+        /// El campo para almacenar el numero en formato double de cada instancia.
+        /// </summary>
         private double numero;
+        #endregion
 
         #region Properties
         /// <summary>
@@ -98,7 +103,7 @@ namespace Entidades
         public static string DecimalBinario(double numero)
         {
             int resto;
-            string resultado = String.Empty;
+            string resultado = "0"; // En caso de que llegue un 0 por parametro.
             int numeroEntero = (int)numero;
 
             while (numeroEntero > 0)
@@ -118,9 +123,14 @@ namespace Entidades
         /// <returns>El numero Binario en formato string.</returns>
         public static string DecimalBinario(string numero)
         {
+            string returnValue = String.Empty;
             double doubleNumber;
-            double.TryParse(numero, out doubleNumber);
-            return DecimalBinario(doubleNumber);
+
+            if (double.TryParse(numero, out doubleNumber))
+            {
+                returnValue = DecimalBinario(doubleNumber);
+            }
+            return returnValue;
         }
 
         /// <summary>

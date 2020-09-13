@@ -8,6 +8,7 @@ namespace Entidades
 {
     public static class Calculadora
     {
+        #region Methods
         /// <summary>
         /// Realiza la operacion matematica entre los numeros segun el operador recibido.
         /// </summary>
@@ -80,5 +81,6 @@ namespace Entidades
 
             return returnValue;
         }
+        #endregion
     }
 }
