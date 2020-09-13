@@ -14,7 +14,7 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
-        private bool binary;
+        private bool binary; // To evaluate a true binary intead of a decimal of 1 and 0.
 
         public FormCalculadora()
         {
