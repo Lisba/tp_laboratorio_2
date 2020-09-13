@@ -14,9 +14,12 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
+        private bool binary;
+
         public FormCalculadora()
         {
             InitializeComponent();
+            this.binary = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,19 +65,19 @@ namespace MiCalculadora
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(this.lblResultado.Text))
+            if (!String.IsNullOrEmpty(this.lblResultado.Text) && !this.binary)
             {
-                Numero conversor = new Numero();
-                this.lblResultado.Text = conversor.DecimalBinario(this.lblResultado.Text);
+                this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
+                this.binary = true;
             }
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(this.lblResultado.Text))
+            if (!String.IsNullOrEmpty(this.lblResultado.Text) && this.binary)
             {
-                Numero conversor = new Numero();
-                this.lblResultado.Text = conversor.BinarioDecimal(this.lblResultado.Text);
+                this.lblResultado.Text = Numero.BinarioDecimal(this.lblResultado.Text);
+                this.binary = false;
             }
         }
     }

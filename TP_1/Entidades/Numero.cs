@@ -9,32 +9,32 @@ namespace Entidades
 {
     public class Numero
     {
-        double numero;
+        private double number;
 
-        public string SetNumero
+        public string Number
         {
             set 
             {
-                numero = ValidarNumero(value);
+                number = ValidarNumero(value);
             }
         }
 
         public Numero()
         {
-            this.numero = 0;
+            number = 0;
         }
         
         public Numero(double numero)
         {
-            this.numero = numero;
+            number = numero;
         }
         
         public Numero(string strNumero)
         {
-            Double.TryParse(strNumero, out this.numero);
+            Double.TryParse(strNumero, out number);
         }
 
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
             string returnValue = "Valor Inválido";
             char[] charArr;
@@ -66,30 +66,30 @@ namespace Entidades
             return returnValue;
         }
 
-        public string DecimalBinario(double numero)
+        public static string DecimalBinario(double numero)
         {
-            int remainder;
-            string result = string.Empty;
+            int resto;
+            string resultado = string.Empty;
             int numeroEntero = (int)numero;
 
             while (numeroEntero > 0)
             {
-                remainder = numeroEntero % 2;
+                resto = numeroEntero % 2;
                 numeroEntero /= 2;
-                result = remainder.ToString() + result;
+                resultado = resto.ToString() + resultado;
             }
 
-            return result;
+            return resultado;
         }
 
-        public string DecimalBinario(string numero)
+        public static string DecimalBinario(string numero)
         {
             double doubleNumber;
             double.TryParse(numero, out doubleNumber);
             return DecimalBinario(doubleNumber);
         }
 
-        bool EsBinario(string binario)
+        private static bool EsBinario(string binario)
         {
             bool isBinary = true;
 
@@ -98,6 +98,7 @@ namespace Entidades
                 if (character < '0' || character > '1')
                 {
                     isBinary = false;
+                    break;
                 }
             }
 
@@ -106,55 +107,51 @@ namespace Entidades
 
         public static double operator +(Numero n1, Numero n2)
         {
-            return n1.numero + n2.numero;
+            return n1.number + n2.number;
         }
 
         public static double operator -(Numero n1, Numero n2)
         {
-            return n1.numero - n2.numero;
+            return n1.number - n2.number;
         }
 
         public static double operator *(Numero n1, Numero n2)
         {
-            return n1.numero * n2.numero;
+            return n1.number * n2.number;
         }
 
         public static double operator /(Numero n1, Numero n2)
         {
-            double returnValue;
+            double returnValue = double.MinValue;
 
-            if (n2.numero == 0)
+            if (n2.number != 0)
             {
-                returnValue = Double.MinValue;
-            }
-            else
-            {
-                returnValue = n1.numero / n2.numero;
+                returnValue = n1.number / n2.number;
             }
 
             return returnValue;
         }
 
-        double ValidarNumero(string strNumero)
+        private double ValidarNumero(string strNumero)
         {
             bool isDouble = true;
             double doubleReturned = 0;
-            int dotCounter = 0;
+            int comaCounter = 0;
 
             foreach(char character in strNumero)
             {
-                if((character < '0' || character > '9') && (character != '.'))
+                if((character < '0' || character > '9') && (character != ','))
                 {
                     isDouble = false;
                 }
 
-                if (character == '.')
+                if (character == ',')
                 {
-                    dotCounter++;
+                    comaCounter++;
                 }
             }
 
-            if(dotCounter > 1)
+            if(comaCounter > 1)
             {
                 isDouble = false;
             }
