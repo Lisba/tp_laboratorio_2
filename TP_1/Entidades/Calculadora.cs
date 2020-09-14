@@ -10,7 +10,7 @@ namespace Entidades
     {
         #region Methods
         /// <summary>
-        /// Realiza la operacion matematica entre los numeros segun el operador recibido.
+        /// Realiza la operacion matematica entre los numeros segun el operador recibido (valida el operador).
         /// </summary>
         /// <param name="num1"></param>
         /// <param name="num2"></param>
@@ -21,7 +21,7 @@ namespace Entidades
             double returnValue = 0;
             char charOperator;
 
-            if (String.IsNullOrEmpty(operador))
+            if (String.IsNullOrEmpty(operador) || (operador != "+" && operador != "-" && operador != "*" && operador != "/"))
             {
                 operador = "+";
             }

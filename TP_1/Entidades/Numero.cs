@@ -103,14 +103,21 @@ namespace Entidades
         public static string DecimalBinario(double numero)
         {
             int resto;
-            string resultado = "0"; // En caso de que llegue un 0 por parametro.
+            string resultado = String.Empty; // En caso de que llegue un 0 por parametro.
             int numeroEntero = (int)numero;
 
-            while (numeroEntero > 0)
+            if(numero > 0 && numeroEntero > 0)
             {
-                resto = numeroEntero % 2;
-                numeroEntero /= 2;
-                resultado = resto.ToString() + resultado;
+                while (numeroEntero > 0)
+                {
+                    resto = numeroEntero % 2;
+                    numeroEntero /= 2;
+                    resultado = resto.ToString() + resultado;
+                }
+            }
+            else
+            {
+                resultado = "0";
             }
 
             return resultado;

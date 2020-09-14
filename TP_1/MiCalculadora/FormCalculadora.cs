@@ -75,7 +75,9 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             this.lblResultado.Text = FormCalculadora.Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text).ToString();
+            this.binary = false;
             btnConvertirABinario.Enabled = true;
+            btnConvertirADecimal.Enabled = false;
         }
 
         /// <summary>
@@ -111,7 +113,7 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(this.lblResultado.Text) && !this.binary)
+            if (!String.IsNullOrEmpty(this.lblResultado.Text) && (!this.binary) && (this.lblResultado.Text != double.MinValue.ToString()))
             {
                 this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
                 this.binary = true;
