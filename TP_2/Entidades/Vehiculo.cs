@@ -95,5 +95,15 @@ namespace Entidades
         {
             return (v1.chasis == v2.chasis);
         }
+        
+        public override bool Equals(object o)
+        {
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            return 0;
+        }
     }
 }
