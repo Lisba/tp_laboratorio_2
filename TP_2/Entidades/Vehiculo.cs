@@ -14,7 +14,6 @@ namespace Entidades
         string chasis;
         EMarca marca;
         ConsoleColor color;
-        ETamanio tamanio;
 
         public enum ETamanio
         {
@@ -34,21 +33,45 @@ namespace Entidades
             Honda
         }
 
+        #region "Propiedades"
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public virtual ETamanio Tamanio { get; }
-        public virtual ConsoleColor Color { get; }
-        public virtual string Chasis { get; }
-        public virtual EMarca Marca { get; }
+        public abstract ETamanio Tamanio { get; }
 
+        public virtual ConsoleColor Color
+        {
+            get
+            {
+                return color;
+            } 
+        }
+        public virtual string Chasis
+        {
+            get
+            {
+                return chasis;
+            } 
+        }
+        public virtual EMarca Marca
+        {
+            get
+            {
+                return marca;
+            } 
+        }
+        #endregion
+
+        #region "Constructores"
         public Vehiculo(EMarca marca, string chasis, ConsoleColor color)
         {
             this.marca = marca;
             this.chasis = chasis;
             this.color = color;
         }
+        #endregion
 
+        #region "Metodos"
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
@@ -69,7 +92,6 @@ namespace Entidades
             sb.AppendLine("");
             sb.AppendLine($"TAMANIO : {p.Tamanio}");
             sb.AppendLine("---------------------");
-            sb.AppendLine("");
 
             return sb.ToString();
         }
@@ -96,14 +118,24 @@ namespace Entidades
             return (v1.chasis == v2.chasis);
         }
         
+        /// <summary>
+        /// Evitar warning de consola.
+        /// </summary>
+        /// <param name="o"></param>
+        /// <returns></returns>
         public override bool Equals(object o)
         {
             return true;
         }
 
+        /// <summary>
+        /// Evitar warning de consola.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return 0;
         }
+        #endregion
     }
 }

@@ -8,6 +8,12 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
+        /// <summary>
+        /// Construye una instancia de ciclomotor.
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(marca, chasis, color)
         {
         }
@@ -23,6 +29,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Publica todos los datos del Vehiculo.
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -36,7 +46,6 @@ namespace Entidades
             sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
-            sb.AppendLine("");
 
             return sb.ToString();
         }

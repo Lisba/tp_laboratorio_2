@@ -45,6 +45,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Publica todos los datos del Vehiculo.
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -55,10 +59,9 @@ namespace Entidades
             sb.AppendLine($"COLOR : {base.Color}");
             sb.AppendLine("---------------------");
             sb.AppendLine("");
-            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
+            sb.AppendLine($"TAMAÑO : {this.Tamanio} TIPO : {this.tipo}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
-            sb.AppendLine("");
 
             return sb.ToString();
         }
