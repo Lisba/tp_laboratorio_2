@@ -6,34 +6,52 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Suv
+    public class Suv : Vehiculo
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Suv(EMarca marca, string chasis, ConsoleColor color) : base(marca, chasis, color)
         {
         }
+
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
-        protected override short Tamanio
+        /// <summary>
+        /// ReadOnly: Retornará el tamaño
+        /// </summary>
+        public override ETamanio Tamanio
         {
             get
             {
-                return 0;
-            }
+                return ETamanio.Grande;  
+            } 
         }
 
-        public override sealed string Mostrar()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SUV");
-            sb.AppendLine(base);
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
+            sb.AppendLine($"CHASIS : {base.Chasis}");
+            sb.AppendLine($"MARCA : {base.Marca}");
+            sb.AppendLine($"COLOR : {base.Color}");
+            sb.AppendLine("---------------------");
+            sb.AppendLine("");
+            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
+            sb.AppendLine("");
 
-            return sb;
+            return sb.ToString();
         }
     }
 }

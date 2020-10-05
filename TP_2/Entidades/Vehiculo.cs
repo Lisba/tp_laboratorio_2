@@ -9,44 +9,69 @@ namespace Entidades
     /// <summary>
     /// La clase Vehiculo no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
-    public sealed class Vehiculo
+    public abstract class Vehiculo
     {
-        enum EMarca
-        {
-            Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
-        }
-        enum ETamanio
-        {
-            Chico, Mediano, Grande
-        }
-        EMarca marca;
         string chasis;
+        EMarca marca;
         ConsoleColor color;
+        ETamanio tamanio;
+
+        public enum ETamanio
+        {
+            Chico,
+            Mediano,
+            Grande
+        }
+
+        public enum EMarca
+        {
+            BMW,
+            HarleyDavidson,
+            Toyota,
+            Chevrolet,
+            Ford,
+            Renault,
+            Honda
+        }
 
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        abstract ETamanio Tamanio { get; set; }
+        public virtual ETamanio Tamanio { get; }
+        public virtual ConsoleColor Color { get; }
+        public virtual string Chasis { get; }
+        public virtual EMarca Marca { get; }
+
+        public Vehiculo(EMarca marca, string chasis, ConsoleColor color)
+        {
+            this.marca = marca;
+            this.chasis = chasis;
+            this.color = color;
+        }
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
         /// <returns></returns>
-        sealed string Mostrar()
-        {
-            return this;
-        }
+        public abstract string Mostrar();
 
-        private static explicit operator string(Vehiculo p)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("CHASIS: {0}\r\n", p.chasis);
-            sb.AppendLine("MARCA : {0}\r\n", p.marca.ToString());
-            sb.AppendLine("COLOR : {0}\r\n", p.color.ToString());
+            sb.AppendLine($"CHASIS: {p.chasis}");
+            sb.AppendLine($"MARCA : {p.marca}");
+            sb.AppendLine($"COLOR : {p.color}");
+            sb.AppendLine("");
+            sb.AppendLine($"TAMANIO : {p.Tamanio}");
             sb.AppendLine("---------------------");
+            sb.AppendLine("");
 
-            return sb;
+            return sb.ToString();
         }
 
         /// <summary>
@@ -59,6 +84,7 @@ namespace Entidades
         {
             return (v1.chasis == v2.chasis);
         }
+
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
