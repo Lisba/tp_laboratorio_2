@@ -1,0 +1,12 @@
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\bin\Debug\Entidadess.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\bin\Debug\Entidadess.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidadess.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidadess.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\bin\Debug\Entidadess.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\bin\Debug\Entidadess.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidadess.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\TP_4\Ojeda.Lisbaldy.2D.TP4\Entidadess\obj\Debug\Entidadess.pdb
