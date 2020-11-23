@@ -10,19 +10,23 @@ namespace Entidades
 {
     public static class BaseDatos
     {
+        #region Fields
         static SqlConnection conexion;
         static SqlCommand comando;
         static SqlDataReader lector;
         static string stringConnection;
         static Producto producto;
         static List<Producto> listaProductos;
+        #endregion
 
+        #region Constructors
         static BaseDatos()
         {
             stringConnection = @"Server=localhost\SQLEXPRESS; Database=TP4; Trusted_Connection=True";
             conexion = new SqlConnection(stringConnection);
             comando = new SqlCommand();
         }
+        #endregion
 
         #region Methods
         /// <summary>
@@ -31,11 +35,14 @@ namespace Entidades
         /// <param name="nombre"></param>
         /// <param name="cantidadDisponible"></param>
         /// <param name="precioUnitario"></param>
-        public static void InsertarProducto(string nombre, int cantidadDisponible, float precioUnitario)
+        public static int InsertarProducto(string nombre, int cantidadDisponible, double precioUnitario)
         {
             try
             {
-                conexion.Open();
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
@@ -46,7 +53,7 @@ namespace Entidades
                 comando.Parameters.Add(new SqlParameter("@CANTIDAD_DISPONIBLE", cantidadDisponible));
                 comando.Parameters.Add(new SqlParameter("@PRECIO_UNITARIO", precioUnitario));
 
-                comando.ExecuteNonQuery();
+                return comando.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -67,7 +74,10 @@ namespace Entidades
         {
             try
             {
-                conexion.Open();
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
@@ -109,7 +119,10 @@ namespace Entidades
             {
                 listaProductos = new List<Producto>();
 
-                conexion.Open();
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
@@ -144,11 +157,14 @@ namespace Entidades
         /// Elimina un producto de la base de datos.
         /// </summary>
         /// <param name="nombre"></param>
-        public static void EliminarProductoPorNombre(string nombre)
+        public static int EliminarProductoPorNombre(string nombre)
         {
             try
             {
-                conexion.Open();
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
@@ -156,7 +172,42 @@ namespace Entidades
 
                 comando.Parameters.Add(new SqlParameter("@NOMBRE", nombre));
 
-                comando.ExecuteNonQuery();
+                return comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw new FailSqlOpException("¡Operación con la base de datos fallida!");
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        /// <summary>
+        /// Disminuye uno a la cantidad de un producto en la Base de Datos.
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="cantidadDisponible"></param>
+        /// <param name="precioUnitario"></param>
+        public static int DisminuirCantidadProducto(Producto producto)
+        {
+            try
+            {
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = @"UPDATE Productos
+                                        SET CantidadDisponible = CantidadDisponible - 1
+                                        WHERE Id = @ID";
+
+                comando.Parameters.Add(new SqlParameter("@ID", producto.Id));
+
+                return comando.ExecuteNonQuery();
             }
             catch (Exception)
             {

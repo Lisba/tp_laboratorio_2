@@ -52,6 +52,12 @@
     <Compile Include="AltaProductoForm.Designer.cs">
       <DependentUpon>AltaProductoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargarDatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarDatosCliente.Designer.cs">
+      <DependentUpon>CargarDatosCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AltaProductoForm.resx">
       <DependentUpon>AltaProductoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarDatosCliente.resx">
+      <DependentUpon>CargarDatosCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>

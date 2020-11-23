@@ -53,7 +53,7 @@ namespace Entidades
         /// </summary>
         /// <param name="strValue"></param>
         /// <returns>Retorna el numero long ó -1 en caso de no ser un long.</returns>
-        static public long ValidarLong(string strValue)
+        static public long ValidarLong(this string instancia, string strValue)
         {
             long returnValue;
 

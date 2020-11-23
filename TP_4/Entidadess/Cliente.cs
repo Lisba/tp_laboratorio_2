@@ -23,6 +23,10 @@ namespace Entidades
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public string Nombre
@@ -30,6 +34,10 @@ namespace Entidades
             get
             {
                 return nombre;
+            }
+            set
+            {
+                nombre = value;
             }
         }
 
@@ -39,6 +47,10 @@ namespace Entidades
             {
                 return apellido;
             }
+            set
+            {
+                apellido = value;
+            }
         }
 
         public int Dni
@@ -46,6 +58,10 @@ namespace Entidades
             get
             {
                 return dni;
+            }
+            set
+            {
+                dni = value;
             }
         }
 
@@ -55,10 +71,16 @@ namespace Entidades
             {
                 return email;
             }
+            set
+            {
+                email = value;
+            }
         }
         #endregion
 
         #region Constructors
+        public Cliente() { }
+
         /// <summary>
         /// Instancia un cliente con email vacío.
         /// </summary>

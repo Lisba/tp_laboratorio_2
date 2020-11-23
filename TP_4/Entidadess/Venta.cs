@@ -14,7 +14,7 @@ namespace Entidades
         List<Producto> listaProductosVenta;
         double precioTotal;
         Cliente cliente;
-        DateTime fechaVenta;
+        string fechaVenta;
         #endregion
 
         #region Properties
@@ -24,6 +24,10 @@ namespace Entidades
             {
                 return id;
             }
+            set
+            {
+                id = value;
+            }
         }
 
         public List<Producto> ListaProductosVenta
@@ -31,6 +35,10 @@ namespace Entidades
             get
             {
                 return listaProductosVenta;
+            }
+            set
+            {
+                listaProductosVenta = value;
             }
         }
 
@@ -40,6 +48,10 @@ namespace Entidades
             {
                 return precioTotal;
             }
+            set
+            {
+                precioTotal = value;
+            }
         }
 
         public Cliente Cliente
@@ -48,18 +60,28 @@ namespace Entidades
             {
                 return cliente;
             }
+            set
+            {
+                cliente = value;
+            }
         }
 
-        public DateTime Date
+        public string Date
         {
             get
             {
                 return fechaVenta;
             }
+            set
+            {
+                fechaVenta = value;
+            }
         }
         #endregion
 
         #region Constructors
+        Venta() { }
+
         /// <summary>
         /// Constructor static para inicializar el id global en 1 la primera vez que se utilice la clase Venta.
         /// </summary>
@@ -81,7 +103,8 @@ namespace Entidades
             this.listaProductosVenta = listaProductosVenta;
             this.precioTotal = precioTotal;
             this.cliente = cliente;
-            this.fechaVenta = DateTime.Now;
+            //this.fechaVenta = DateTime.Now;
+            this.fechaVenta = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
         #endregion
     }

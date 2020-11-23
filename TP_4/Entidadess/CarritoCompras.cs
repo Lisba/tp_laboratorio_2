@@ -64,23 +64,6 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Obtiene el subtotal de la lista de productos recibida por parametro (Sobrecarga del metodo anterior).
-        /// </summary>
-        /// <param name="listaProductos"></param>
-        /// <returns>El subtotal</returns>
-        public static double GetPrecioSubTotal(List<Producto> listaProductos)
-        {
-            double subTotal = 0;
-
-            foreach (Producto producto in listaProductos)
-            {
-                subTotal += producto.PrecioUnidad;
-            }
-
-            return subTotal;
-        }
-
-        /// <summary>
         /// Valida si el cliente se apellida Ojeda y devuelve el valor de descuento del 13% del subtotal recibido por parametro.
         /// </summary>
         /// <param name="subTotal"></param>

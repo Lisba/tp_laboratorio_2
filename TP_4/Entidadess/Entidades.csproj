@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos.cs" />
     <Compile Include="BaseDatos.cs" />
     <Compile Include="CarritoCompras.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Comercio.cs" />
+    <Compile Include="ExtensionValidaciones.cs" />
     <Compile Include="FailSqlOpException.cs" />
     <Compile Include="IPersona.cs" />
     <Compile Include="Producto.cs" />
