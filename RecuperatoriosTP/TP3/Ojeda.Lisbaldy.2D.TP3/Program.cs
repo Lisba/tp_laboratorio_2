@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
+using ClasesInstanciables;
+using EntidadesAbstractas;
 
 namespace Ojeda.Lisbaldy._2D.TP3
 {

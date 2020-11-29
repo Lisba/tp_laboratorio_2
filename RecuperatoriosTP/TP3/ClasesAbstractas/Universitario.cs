@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
     public abstract class Universitario : Persona
     {
@@ -46,7 +46,7 @@ namespace ClasesAbstractas
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
-        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
+        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(apellido, dni, nacionalidad, nombre)
         {
             this.legajo = legajo;
         }

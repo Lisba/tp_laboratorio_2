@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using Excepciones;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
@@ -125,7 +125,7 @@ namespace ClasesAbstractas
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
-        public Persona(string apellido, int dni, ENacionalidad nacionalidad, string nombre) : this(nombre, apellido, nacionalidad)
+        public Persona(string apellido, int dni, ENacionalidad nacionalidad, string nombre) : this(apellido, nacionalidad, nombre)
         {
             DNI = dni;
         }
@@ -137,7 +137,7 @@ namespace ClasesAbstractas
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
-        public Persona(string apellido, string nombre, ENacionalidad nacionalidad, string dni) : this(nombre, apellido, nacionalidad)
+        public Persona(string apellido, string dni, ENacionalidad nacionalidad, string nombre) : this(apellido, nacionalidad, nombre)
         {
             StringToDNI = dni;
         }
@@ -154,7 +154,7 @@ namespace ClasesAbstractas
             {
                 StringBuilder stringDeRetorno = new StringBuilder();
                 stringDeRetorno.AppendLine($"NOMBRE COMPLETO: {Apellido}, {Nombre}");
-                stringDeRetorno.AppendLine($"NACIONALIDAD: ${Nacionalidad}");
+                stringDeRetorno.AppendLine($"NACIONALIDAD: {Nacionalidad}");
 
                 return stringDeRetorno.ToString();
             }
@@ -181,7 +181,7 @@ namespace ClasesAbstractas
                 }
                 else
                 {
-                    throw new NacionalidadInvalidaException("DNI inválido para nacionalidad Argentina");
+                    throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
                 }
             }
             else if (dato >= 90000000 && dato <= 99999999)
@@ -192,7 +192,7 @@ namespace ClasesAbstractas
                 }
                 else
                 {
-                    throw new NacionalidadInvalidaException("DNI inválido para nacionalidad Extranjera");
+                    throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
                 }
             }
             else

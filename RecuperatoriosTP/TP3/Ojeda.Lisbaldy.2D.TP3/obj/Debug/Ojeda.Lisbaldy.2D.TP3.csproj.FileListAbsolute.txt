@@ -1,0 +1,16 @@
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\obj\Debug\Ojeda.Lisbaldy.2D.TP3.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\obj\Debug\Ojeda.Lisbaldy.2D.TP3.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Ojeda.Lisbaldy.2D.TP3.exe.config
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Ojeda.Lisbaldy.2D.TP3.exe
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Ojeda.Lisbaldy.2D.TP3.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Archivos.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\ClasesAbstractas.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\ClasesInstanciables.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Excepciones.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Archivos.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\ClasesAbstractas.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\ClasesInstanciables.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\bin\Debug\Excepciones.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\obj\Debug\Ojeda.Lisbaldy.2D.TP3.csproj.CopyComplete
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\obj\Debug\Ojeda.Lisbaldy.2D.TP3.exe
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Ojeda.Lisbaldy.2D.TP3\obj\Debug\Ojeda.Lisbaldy.2D.TP3.pdb

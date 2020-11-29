@@ -10,11 +10,14 @@ namespace Archivos
 {
     public class Texto : IArchivo<string>
     {
+        #region Constructors
         /// <summary>
         /// Constructor por defecto.
         /// </summary>
         public Texto() { }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Guarda en un archivo los datos recibidos por parametro.
         /// </summary>
@@ -65,7 +68,7 @@ namespace Archivos
             {
                 throw new ArchivosException("No se pudo leer el archivo de texto.", ex);
             }
-
         }
+        #endregion
     }
 }
