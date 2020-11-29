@@ -1,0 +1,2 @@
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.csproj.CoreCompileInputs.cache

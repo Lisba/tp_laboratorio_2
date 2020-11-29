@@ -1,0 +1,6 @@
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\usuario\Documents\Sistemas-UTN\2do cuatrimestre\Programación II y Laboratorio II\tp_laboratorio_2\RecuperatoriosTP\TP3\Excepciones\obj\Debug\Excepciones.pdb
